@@ -1,0 +1,56 @@
+{
+  "walker_training": {
+    "training_seeds": 3,
+    "control_steps_per_seed": 2000000,
+    "held_out_episodes": 9,
+    "return_mean": 993.4647,
+    "between_model_sd": 0.1944,
+    "return_max": 1000
+  },
+  "horizon_analysis": {
+    "episodes_two_stages": 216,
+    "walker_h2_mean_latency_reduction_approx_percent": 17,
+    "scope": "Same-device H2 versus H3 comparison; returns close in this matrix; not a general algorithm improvement."
+  },
+  "act_baseline": {
+    "scripted_demos": 50,
+    "updates": 10000,
+    "training_seeds": 1,
+    "paired_scenes": 50,
+    "execution_conditions": 2,
+    "temporal_official_success": 0.9,
+    "chunk_official_success": 0.86,
+    "paired_p": 0.5
+  },
+  "stride": {
+    "paired_scenes": 50,
+    "episodes": 250,
+    "strides": [
+      1,
+      5,
+      10,
+      25,
+      100
+    ],
+    "success_rates": [
+      0,
+      0.06,
+      0.26,
+      0.38,
+      0.82
+    ]
+  },
+  "oracle_mpc": {
+    "paired_scenes": 20,
+    "episodes": 60,
+    "training_seeds": 1,
+    "act_ever_success": 0.95,
+    "mpc_ever_success": 0.95,
+    "act_final_success": 0.85,
+    "mpc_final_success": 0.15,
+    "act_mean_controller_ms": 5.198,
+    "mpc_mean_controller_ms": 26.166,
+    "learned_dynamics": false,
+    "note": "Final test only; earlier numerical calibration/test interruptions were retained privately. Simulation pauses during computation."
+  }
+}
